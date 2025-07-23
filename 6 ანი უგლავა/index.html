@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div class="header">
+    <h1>Weather Today</h1>
+    <h2>Your beautiful weather companion</h2>
+    <button id="toggleTemp">&#8451;</button>
+    <input type="text" id="cityInput" placeholder="Search city..">
+    </div>
+    </header>
+    <main>
+      
+     <!--Main weather card-->
+     <div class="container">
+    <div class="weather-card">
+     <h2><span id="city">Batumi</span></h2>
+     <h1 id="temp">30&#8451;</h1>
+     <p>Feels like: <span id="feels">30&#8451;</span></p>
+     <p>High: <span id="high">30&#8451;</span></p>
+     <p>Low: <span id="low">24&#8451;</span></p>
+    </div>
+       
+    <!--Extra details-->
+    <div class="details">
+     <p class="humidity">Humidity</p>
+     <p class="wind">Wind</p>
+     <p class="pressure">Pressure</p>
+     <p class="sunrise">Sunrise</p>
+     <p class="sunset">Sunset</p>
+    </div>
+    </div>
+      
+    <div class="forecast">
+        <h2>5-Day Forecast</h2>
+        <div class="forecast-days">
+            <!--Forecast cards-->
+        </div>
+    </div>
+
+    </main>
+  <script src="script.js"></script>
+</body>
+</html>

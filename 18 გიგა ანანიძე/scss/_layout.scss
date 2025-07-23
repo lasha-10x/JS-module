@@ -1,0 +1,26 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.app-container {
+  display: grid;
+  grid-template-columns: 80px 1fr 320px;
+  height: 100vh;
+  gap: $spacing-lg;
+  padding: $spacing-lg;
+
+  @include tablet {
+    grid-template-columns: 80px 1fr;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    padding: $spacing-md;
+  }
+}
+
+.main-content {
+  @include flex-column;
+  gap: $spacing-lg;
+  overflow-y: auto;
+  @include custom-scrollbar;
+}

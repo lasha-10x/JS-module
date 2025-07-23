@@ -1,0 +1,22 @@
+// Main SCSS file - imports all partials
+@use 'sass:color';
+
+// Import order is important!
+// 1. Variables and mixins first
+@use 'variables';
+@use 'mixins';
+
+// 2. Base styles and animations
+@use 'base';
+@use 'animations';
+
+// 3. Layout
+@use 'layout';
+
+// 4. Components
+@use 'components/sidebar';
+@use 'components/search';
+@use 'components/current-weather';
+@use 'components/forecast';
+@use 'components/air-conditions';
+@use 'components/weekly-forecast';

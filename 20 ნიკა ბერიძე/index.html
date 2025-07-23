@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle">
+      <label>
+        <input type="checkbox" id="themeSwitch">
+        Dark Mode
+      </label>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <h1>Weather App</h1>
+      <div class="search">
+        <input type="text" id="cityInput" placeholder="Enter city name" />
+        <button id="searchBtn">Search</button>
+        <label class="toggle">
+          <input type="checkbox" id="unitToggle" />
+          <span>°F</span>
+        </label>
+      </div>
+    </header>
+
+    <!-- Current Weather -->
+    <main>
+      <section class="current-weather">
+        <h2 id="cityName">City Name</h2>
+        <div class="weather-info">
+          <i class="wi wi-day-sunny" id="weatherIcon"></i>
+          <div>
+            <p id="temperature">--°</p>
+            <p id="description">Description</p>
+            <p id="humidity">Humidity: --%</p>
+            <p id="wind">Wind: -- m/s</p>
+            <p id="sunrise">Sunrise: --</p>
+            <p id="sunset">Sunset: --</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Forecast -->
+      <section class="forecast">
+        <h3>5-Day Forecast</h3>
+        <div id="forecastContainer" class="forecast-cards"></div>
+      </section>
+
+      <!-- Favorites -->
+      <section class="favorites">
+        <h3>Favorite Cities</h3>
+        <ul id="favoritesList"></ul>
+      </section>
+    </main>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>

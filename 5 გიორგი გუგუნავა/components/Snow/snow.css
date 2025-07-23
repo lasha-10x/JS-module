@@ -1,0 +1,12 @@
+.fa-snowflake {
+  animation: fall linear forwards;
+  color: #fff;
+  position: fixed;
+  top: -20px;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}/*# sourceMappingURL=snow.css.map */

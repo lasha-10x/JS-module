@@ -1,0 +1,95 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.forecast-section {
+  @include card-base;
+  @include fade-in;
+
+  h3 {
+    color: $text-secondary;
+    @include text-caption;
+    margin-bottom: $spacing-lg;
+  }
+
+  .hourly-forecast {
+    @include grid-equal-columns(6, $spacing-md);
+
+    @include mobile {
+      @include grid-equal-columns(3, $spacing-md);
+    }
+
+    .forecast-item {
+      @include flex-column-center;
+      gap: $spacing-sm;
+      padding: $spacing-md;
+      border-radius: $border-radius-sm;
+      transition: background-color $transition-fast;
+
+      &:hover {
+        background-color: rgba($text-primary, 0.05);
+      }
+
+      .time {
+        color: $text-secondary;
+        @include text-small;
+      }
+
+      .forecast-icon {
+        @include weather-icon-base;
+
+        &.cloudy {
+          @include weather-icon-cloudy;
+        }
+
+        &.partly-sunny {
+          background: linear-gradient(135deg, #fbbf24, #f59e0b);
+          
+          &::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 16px;
+            height: 12px;
+            background: #9ca3af;
+            border-radius: 50px;
+          }
+        }
+
+        &.sunny {
+          @include weather-icon-sunny;
+        }
+
+        &.partly-cloudy {
+          @include weather-icon-cloudy;
+          
+          &::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            width: 12px;
+            height: 12px;
+            background: #fbbf24;
+            border-radius: 50%;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+            width: 20px;
+            height: 12px;
+            background: #9ca3af;
+            border-radius: 50px;
+          }
+        }
+      }
+
+      .temp {
+        @include heading-small;
+      }
+    }
+  }
+}

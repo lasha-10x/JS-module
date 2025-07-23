@@ -1,0 +1,19 @@
+@use "./weather-forecast/forecast-control.scss";
+@use "./weather-forecast/forecast-content/today-forecast/precipitation-card.scss";
+@use "./weather-forecast/forecast-content/today-forecast/sun-moon.scss";
+@use "./weather-forecast/forecast-content/today-forecast/wind-pressure-card.scss";
+@use "./weather-forecast/forecast-content/hourly-forecast/hourly-forecast.scss";
+@use "./weather-forecast/forecast-content/weekly-forecast.scss";
+
+.weather-forecast-wrapper {
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.forecast-content {
+    background-color: white;
+    display: flex;
+    gap: 2rem;
+    padding: 40px;
+    border-radius: 10px;
+}

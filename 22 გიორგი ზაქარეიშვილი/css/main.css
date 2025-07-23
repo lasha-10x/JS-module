@@ -1,0 +1,192 @@
+html, body, .weather-app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  background: linear-gradient(180deg, #6eaec7 0%, #a6d8ff 100%);
+  color: #fff;
+  transition: background 0.6s ease-in-out;
+}
+
+.weather-app {
+  background: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.weather-header {
+  text-align: center;
+  margin-top: 20px;
+}
+.weather-header .search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  gap: 8px;
+}
+.weather-header .search-bar input {
+  flex: 1;
+  max-width: 220px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.weather-header .search-bar input::-moz-placeholder {
+  color: #fff;
+}
+.weather-header .search-bar input::placeholder {
+  color: #fff;
+}
+.weather-header .search-bar input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+.weather-header .search-bar .search-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.weather-header .search-bar .search-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.weather-header .location {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.weather-header .temperature {
+  font-size: 64px;
+  font-weight: 300;
+  margin: 10px 0;
+}
+.weather-header .date-time {
+  font-size: 18px;
+  font-weight: 200;
+  margin-top: 6px;
+}
+
+.illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0;
+  height: 160px;
+}
+.illustration .illustration-image {
+  font-size: 96px;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.illustration .illustration-image:hover {
+  transform: scale(1.1);
+}
+.illustration .illustration-image img {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.forecast-section {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 360px;
+  padding: 16px;
+}
+.forecast-section .forecast-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 16px;
+}
+.forecast-section .forecast-tabs .tab {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.forecast-section .forecast-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 8px;
+  flex-wrap: wrap;
+}
+.forecast-section .forecast-cards .card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.forecast-section .forecast-cards .card .icon {
+  font-size: 18px;
+  margin: 4px 0;
+}
+.forecast-section .forecast-cards .card .chance {
+  color: #4fc3f7;
+  font-size: 11px;
+}
+.forecast-section .forecast-cards .card .temp {
+  font-weight: bold;
+}
+.forecast-section .forecast-cards .card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+  .weather-header .temperature {
+    font-size: 40px;
+  }
+  .weather-header .location {
+    font-size: 18px;
+  }
+  .weather-header .date-time {
+    font-size: 14px;
+  }
+  .illustration {
+    height: 120px;
+  }
+  .illustration .illustration-image {
+    font-size: 72px;
+  }
+}
+@media (max-width: 768px) {
+  .weather-header .temperature {
+    font-size: 56px;
+  }
+  .weather-header .location {
+    font-size: 20px;
+  }
+  .weather-header .date-time {
+    font-size: 16px;
+  }
+  .illustration {
+    height: 140px;
+  }
+  .illustration .illustration-image {
+    font-size: 84px;
+  }
+}/*# sourceMappingURL=main.css.map */

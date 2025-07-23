@@ -1,0 +1,163 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header */
+.t-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.t-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Main Container */
+.t-main-container {
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Search Section */
+.t-search-section {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#t-city-input {
+  padding: 0.75rem;
+  width: 250px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+#t-search-btn {
+  padding: 0.75rem 1.2rem;
+  background-color: #ffffff33;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#t-search-btn:hover {
+  background-color: #ffffff55;
+}
+
+/* Current Weather */
+.t-weather-display {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.t-current-weather-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.t-current-weather-card:hover {
+  transform: translateY(-5px);
+}
+
+.t-temp {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.t-description {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.t-weather-icon {
+  width: 80px;
+  height: 80px;
+}
+
+/* Forecast */
+.t-forecast-section {
+  margin-top: 2rem;
+}
+
+.t-forecast-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.t-forecast-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.t-forecast-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: center;
+  min-width: 120px;
+  transition: transform 0.3s;
+}
+
+.t-forecast-card:hover {
+  transform: scale(1.05);
+}
+
+.t-forecast-card img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Footer */
+.t-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.2);
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .t-forecast-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .t-search-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #t-city-input {
+    width: 90%;
+  }
+}

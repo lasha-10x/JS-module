@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <script src="./assets/js/script.js" defer></script>
+  <title>weather app</title>
+</head>
+
+<body>
+  <div id="background-layer"></div>
+  <!-- Spinner -->
+  <div id="spinner" class="hidden">
+    <div class="loader"></div>
+  </div>
+
+  <main id="main-container">
+    <section id="main-section">
+      <a href="#">
+        <img src="./assets/media/icons/logo.svg" alt="weather app logo" />
+      </a>
+      <div id="weather-main-info">
+        <h1></h1>
+        <div class="searched_location_weather_info">
+          <h2></h2>
+          <span></span>
+        </div>
+        <img src="" alt="" />
+      </div>
+    </section>
+
+    <!-- <div id="blur-background"></div> -->
+
+    <aside>
+      <!-- Search Form -->
+      <form class="search-form">
+        <input type="search" id="search-input" placeholder="Search location..." autofocus required />
+        <button type="submit" id="search-button">
+          <img src="./assets/media/icons/search icon.svg" alt="search icon" class="search-icon" />
+        </button>
+      </form>
+
+      <!-- Unit Switch -->
+      <!-- <div id="unit-toggle">
+        <label>
+          <input type="checkbox" id="unit-switch" />
+          °F / °C
+        </label>
+      </div> -->
+
+      <!-- Current Weather Details -->
+      <div id="weather-details">
+        <h2>Weather Details</h2>
+        <div class="current-weather-details">
+          <div class="current-weather-info">
+            <p>Temp max</p>
+            <span id="temp-max"></span>
+            <img src="./assets/media/icons/temp-max.svg" alt="max temperature" />
+          </div>
+          <div class="current-weather-info">
+            <p>Temp min</p>
+            <span id="temp-min"></span>
+            <img src="./assets/media/icons/temp-min.svg" alt="min temperature" />
+          </div>
+          <div class="current-weather-info">
+            <p>Humidity</p>
+            <span id="humidity"></span>
+            <img src="./assets/media/icons/humadity.svg" alt="humidity icon" />
+          </div>
+          <div class="current-weather-info">
+            <p>Cloudy</p>
+            <span id="cloudiness"></span>
+            <img src="./assets/media/icons/cloudy.svg" alt="cloudy icon" />
+          </div>
+          <div class="current-weather-info">
+            <p>Wind</p>
+            <span id="wind"></span>
+            <img src="./assets/media/icons/wind.svg" alt="wind icon" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Forecast -->
+      <div class="long-term-weather-details">
+        <h2></h2>
+        <div class="next-days-weather-info">
+          <h2>Weather Forecast</h2>
+          <div class="week-days">
+            <!-- JS inserts 7-day forecast cards here -->
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+</body>
+
+</html>

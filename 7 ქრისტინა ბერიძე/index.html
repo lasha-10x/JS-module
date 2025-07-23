@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="weather-app">
+        <header class="header">
+            <h1>Weather Forecast</h1>
+            <div class="search-bar">
+                <div class="input-wrapper">
+                    <img src="./assets/icons/search-icon.svg" alt="Search icon" class="search-icon-placeholder">
+                    <input type="text" id="city-input" placeholder="Search location..">
+                </div>
+                </div>
+        </header>
+        <main class="current-weather">
+            <div class="location-date">
+                <h2 id="location">Tbilisi</h2>
+                <p id="date">Friday, July 4</p>
+            </div>
+            <div class="weather-info">
+                <img src="./assets/icons/cloudy-icon.svg" alt="Weather icon" id="weather-icon">
+                <div class="temperature">
+                    <span id="temp-value">25</span><span class="unit">°C</span>
+                </div>
+                <p id="description">Cloudy</p>
+            </div>
+            <div class="details">
+                <p>Humidity: <span id="humidity">70%</span></p>
+                <p>Wind: <span id="wind-speed">15 km/h</span></p>
+            </div>
+        </main>
+        <section class="forecast-section">
+            <div class="forecast-cards">
+                <div class="forecast-card">
+                    <p class="forecast-date">Sat</p>
+                    <img src="./assets/icons/sunshower-icon.svg" alt="Weather icon">
+                    <p class="forecast-temp-min">Min: 20°C</p>
+                    <p class="forecast-temp-max">Max: 30°C</p>
+                </div>
+                <div class="forecast-card">
+                    <p class="forecast-date">Sun</p>
+                    <img src="./assets/icons/sunny.svg" alt="Weather icon">
+                    <p class="forecast-temp-min">Min: 21°C</p>
+                    <p class="forecast-temp-max">Max: 31°C</p>
+                </div>
+                <div class="forecast-card">
+                    <p class="forecast-date">Mon</p>
+                    <img src="./assets/icons/sunshower-icon.svg" alt="Weather icon">
+                    <p class="forecast-temp-min">Min: 19°C</p>
+                    <p class="forecast-temp-max">Max: 28°C</p>
+                </div>
+                <div class="forecast-card">
+                    <p class="forecast-date">Tue</p>
+                    <img src="./assets/icons/cloudy-icon.svg" alt="Weather icon">
+                    <p class="forecast-temp-min">Min: 22°C</p>
+                    <p class="forecast-temp-max">Max: 29°C</p>
+                </div>
+                <div class="forecast-card">
+                    <p class="forecast-date">Wed</p>
+                    <img src="./assets/icons/rainy.svg" alt="Weather icon">
+                    <p class="forecast-temp-min">Min: 18°C</p>
+                    <p class="forecast-temp-max">Max: 30°C</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>

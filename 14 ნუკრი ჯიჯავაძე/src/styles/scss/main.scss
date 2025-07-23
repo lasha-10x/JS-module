@@ -1,0 +1,35 @@
+@import "./components/header.scss";
+@import "./components/search-controls.scss";
+@import "./components/weather-section.scss";
+@import "./components/weather-forecast.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter,system-ui,sans-serif;
+}
+
+.blue-gradient-theme {
+  background: linear-gradient(to bottom right,
+    #60a5fa, 
+    #3b82f6,  
+    #2563eb  
+  );
+}
+
+.pink-gradient-theme {
+  background: linear-gradient(to bottom right,
+    #9333ea, 
+    #db2777,  
+    #f97316   
+  );
+}
+
+.dark-gradient-theme {
+  background: linear-gradient(to bottom right,
+    #111827, 
+    #1e3a8a,  
+    #3730a3  
+  );
+}

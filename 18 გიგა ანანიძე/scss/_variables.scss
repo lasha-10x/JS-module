@@ -1,0 +1,33 @@
+// Color Variables
+$primary-bg: #1a1d29;
+$secondary-bg: #252836;
+$card-bg: #2d3142;
+$text-primary: #ffffff;
+$text-secondary: #8b8fa3;
+$accent-blue: #4a9eff;
+$accent-orange: #ffa500;
+
+// Spacing Variables
+$spacing-xs: 8px;
+$spacing-sm: 12px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// Border Radius
+$border-radius: 16px;
+$border-radius-sm: 12px;
+$border-radius-lg: 20px;
+
+// Breakpoints
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1200px;
+
+// Transitions
+$transition-fast: 0.3s ease;
+$transition-slow: 0.6s ease-out;
+
+// Z-index
+$z-index-modal: 1000;
+$z-index-dropdown: 100;
+$z-index-tooltip: 50;

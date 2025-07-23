@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+
+  }
+  @import "mixins";
+  @import "variables";
+  @import "header";
+
+  @import "weather-details";
+  @import "hourly-forecast";
+  @import "daily-forecast.scss";
+  @import "footer.scss";
+  
+
+ 
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+

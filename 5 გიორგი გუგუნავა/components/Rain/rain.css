@@ -1,0 +1,12 @@
+.fa-droplet {
+  animation: fall linear forwards;
+  color: rgba(255, 255, 255, 0.7098039216);
+  position: fixed;
+  top: -20px;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}/*# sourceMappingURL=rain.css.map */

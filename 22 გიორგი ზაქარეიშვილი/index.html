@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+  <div class="weather-app">
+    <header class="weather-header">
+      <div class="search-bar">
+        <button class="search-btn">🔍</button>
+        <input type="text" placeholder="Search city..." />
+      </div>
+      <div class="location">Batumi</div>
+      <div class="temperature">19°</div>
+      <div class="date-time">Loading time...</div>
+    </header>
+    <div class="illustration">
+      <div class="illustration-image"></div>
+    </div>
+    <div class="forecast-section">
+      <div class="forecast-tabs">
+        <button class="tab">Weekly Forecast</button>
+      </div>
+      <div class="forecast-cards" id="forecast-cards"></div>
+    </div>
+  </div>
+  <script src="/js/weather.js"></script>
+</body>
+</html>

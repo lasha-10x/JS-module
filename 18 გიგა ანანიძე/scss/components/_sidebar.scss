@@ -1,0 +1,45 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.sidebar {
+  @include card-base;
+  @include flex-column-center;
+  gap: $spacing-lg;
+  padding: $spacing-lg $spacing-sm;
+
+  @include mobile {
+    display: none;
+  }
+
+  .nav-item {
+    @include flex-column-center;
+    gap: $spacing-xs;
+    padding: $spacing-sm;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+    transition: all $transition-fast;
+    color: $text-secondary;
+    @include text-caption;
+
+    &.active {
+      background-color: $accent-blue;
+      color: $text-primary;
+
+      .nav-icon {
+        fill: $text-primary;
+      }
+    }
+
+    &:hover:not(.active) {
+      background-color: rgba($text-primary, 0.1);
+      color: $text-primary;
+    }
+
+    .nav-icon {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+      transition: fill $transition-fast;
+    }
+  }
+}

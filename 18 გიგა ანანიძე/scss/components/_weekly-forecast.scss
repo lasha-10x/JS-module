@@ -1,0 +1,86 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.weekly-forecast {
+  @include card-base;
+
+  @include tablet {
+    display: none;
+  }
+
+  h3 {
+    color: $text-secondary;
+    @include text-caption;
+    margin-bottom: $spacing-lg;
+  }
+
+  .forecast-list {
+    @include flex-column;
+    gap: $spacing-md;
+
+    .forecast-day {
+      @include flex-between;
+      padding: $spacing-md 0;
+      border-bottom: 1px solid rgba($text-primary, 0.1);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .day {
+        @include text-body;
+        font-weight: 500;
+        min-width: 60px;
+      }
+
+      .day-weather {
+        @include flex-center;
+        gap: $spacing-sm;
+        flex: 1;
+        justify-content: center;
+
+        .day-icon {
+          @include weather-icon-base(24px);
+
+          &.sunny {
+            @include weather-icon-sunny;
+          }
+
+          &.cloudy {
+            @include weather-icon-cloudy;
+          }
+
+          &.rainy {
+            @include weather-icon-rainy;
+          }
+
+          &.stormy {
+            background: linear-gradient(135deg, #374151, #1f2937);
+            
+            &::before {
+              content: '⚡';
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 12px;
+              color: #fbbf24;
+            }
+          }
+        }
+
+        .day-condition {
+          @include text-small;
+          color: $text-secondary;
+        }
+      }
+
+      .day-temp {
+        @include text-body;
+        font-weight: 600;
+        min-width: 60px;
+        text-align: right;
+      }
+    }
+  }
+}

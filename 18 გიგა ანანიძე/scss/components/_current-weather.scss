@@ -1,0 +1,56 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.current-weather {
+  @include card-base;
+  @include flex-between;
+  @include fade-in;
+
+  @include mobile {
+    @include flex-column;
+    text-align: center;
+    gap: $spacing-lg;
+  }
+
+  .location-info {
+    .city-name {
+      @include heading-large;
+      margin-bottom: $spacing-xs;
+    }
+
+    .rain-chance {
+      color: $text-secondary;
+      @include text-body;
+    }
+  }
+
+  .temperature-display {
+    @include flex-center;
+    gap: $spacing-lg;
+
+    .temperature {
+      font-size: 120px;
+      font-weight: 200;
+      line-height: 1;
+
+      @include mobile {
+        font-size: 80px;
+      }
+    }
+
+    .weather-icon {
+      width: 120px;
+      height: 120px;
+
+      @include mobile {
+        width: 80px;
+        height: 80px;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

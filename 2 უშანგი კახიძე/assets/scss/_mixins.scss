@@ -1,0 +1,35 @@
+@mixin boxSize($w, $h) {
+  width: $w;
+  height: $h;
+}
+@mixin gridFlow($col, $row) {
+  display: grid;
+  grid-template-columns: repeat($col, 1fr);
+  grid-template-rows: repeat($row, auto);
+}
+@mixin flexCenter($jc, $ai) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+@mixin verticalFlex($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+@mixin fontStyle($size, $weight, $ls, $lh) {
+  font-size: $size;
+  font-weight: $weight;
+  letter-spacing: $ls;
+  line-height: $lh;
+}
+@mixin border {
+  border: none;
+  outline: none;
+}
+
+@mixin respond-to($breakpoint) {
+  @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}

@@ -1,0 +1,8 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.search-container {
+  .search-input {
+    @include input-base;
+  }
+}

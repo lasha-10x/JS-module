@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js" defer></script>
+
+</head>
+
+<body>
+    <div class="weather-app-container">
+        <div class="left-panel">
+            <div class="search-bar">
+                <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+                <input type="text" id="city-input" placeholder="შეიყვანე ქალაქი..." />
+            </div>
+
+            <div class="current-weather">
+                <div class="temperature" id="current-temp">--°C</div>
+                <div class="city" id="current-city">City Name</div>
+                <div class="condition" id="current-condition">Condition</div>
+                <img id="weather-icon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon">
+            </div>
+
+            <div class="weather-details">
+                <div class="detail-item">
+                    <div class="horizont">
+                        <img src="./Images/rain.svg" alt="" class="icon">
+                        <span>ტენიანობა</span>
+                    </div>
+                    <span id="humidity-value">--%</span>
+                </div>
+                <div class="detail-item">
+                    <div class="horizont">
+                        <img src="./Images/Vector.svg" alt="" class="icon">
+                        <span>ქარის სიჩქარე</span>
+                    </div>
+                    <span id="wind-speed-value">-- მ/წმ</span>
+                </div>
+                <div class="detail-item">
+                    <div class="horizont">
+                        <img src="./Images/presure.svg" alt="" class="icon">
+                        <span>წნევა</span>
+                    </div>
+
+                    <span id="pressure-value">-- პოდი</span>
+                </div>
+                <div class="detail-item">
+                    <div class="horizont">
+                        <img src="./Images/visibility.svg" alt="" class="icon">
+                        <span>ხილვადობა</span>
+                    </div>
+                    <span id="visibility-value">-- კმ</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="forecast-section" id="hourly-forecast-section">
+                <h3>საათობრივი პროგნოზი</h3>
+                <div class="forecast-cards" id="hourly-cards-container">
+                </div>
+            </div>
+
+            <div class="forecast-section" id="daily-forecast-section">
+                <h3>დღიური პროგნოზი</h3>
+                <div class="forecast-cards" id="daily-cards-container">
+                </div>
+            </div>
+
+            <div class="wind-compass">
+                <h3>ქარის მიმართულება</h3>
+                <div class="compass-inner">
+                    <div>
+                        <div class="arrow" id="wind-arrow"></div>
+                        <div class="wind-speed-display" id="wind-speed-compass">--</div>
+                        <div class="wind-unit">მ/წმ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="message-box">
+        <span id="message-text"></span>
+        <button onclick="document.getElementById('message-box').style.display = 'none';">&times;</button>
+    </div>
+
+</body>
+
+</html>

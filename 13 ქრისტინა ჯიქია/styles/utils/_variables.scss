@@ -1,0 +1,27 @@
+// styles/utils/_variables.scss
+
+:root {
+    /* Default to light mode variables */
+    --main-bg-color: #f0f2f5;
+    --panel-bg-color: #ffffff;
+    --text-color: #333333;
+    --sub-text-color: #666666;
+    --border-color: #e0e0e0;
+    --primary-color: #007bff; /* Example blue */
+    --accent-color: #ff9800; /* Example orange */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition-speed: 0.3s ease;
+}
+
+body.dark-mode {
+    /* Dark mode variables override light mode */
+    --main-bg-color: #2c2c2c;
+    --panel-bg-color: #3a3a3a;
+    --text-color: #e0e0e0;
+    --sub-text-color: #b0b0b0;
+    --border-color: #555555;
+    --primary-color: #64b5f6; /* Lighter blue for dark mode */
+    --accent-color: #ffa726; /* Lighter orange for dark mode */
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}

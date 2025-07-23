@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "InterTight Bold";
+  src: url(../../assets/font/Inter_Tight/static/InterTight-Bold.ttf) format("woff2");
+}
+@font-face {
+  font-family: "InterTight Medium";
+  src: url(../../assets/font/Inter_Tight/static/InterTight-Medium.ttf) format("woff2");
+}
+@font-face {
+  font-family: "InterTight Thin";
+  src: url(../../assets/font/Inter_Tight/static/InterTight-Thin.ttf) format("woff2");
+}
+.content_wrapper main .forecast_container {
+  margin: 50px auto;
+  width: 90%;
+  max-width: 1920px;
+}
+
+.content_wrapper main .forecast_container {
+  background-color: rgba(255, 255, 255, 0.1058823529);
+  border-radius: 20px;
+  box-shadow: 0px 20px 50px 5px rgba(0, 0, 0, 0.358);
+  padding: 20px;
+}
+.content_wrapper main .forecast_container h2 {
+  font-family: "InterTight Bold";
+  font-size: 30px;
+  margin: 20px 0px 20px 25px;
+}
+.content_wrapper main .forecast_container .days_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.content_wrapper main .forecast_container .days_container .days {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: clamp(120px, 15vw, 200px);
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.1058823529);
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+}
+.content_wrapper main .forecast_container .days_container .days .day {
+  font-family: "InterTight Bold";
+  font-size: clamp(16px, 2vw, 20px);
+}
+.content_wrapper main .forecast_container .days_container .days img {
+  width: clamp(50px, 7vw, 70px);
+  height: clamp(50px, 7vw, 70px);
+}
+.content_wrapper main .forecast_container .days_container .days #day_weather {
+  font-size: clamp(13px, 1.5vw, 16px);
+}
+.content_wrapper main .forecast_container .days_container .days .day_night {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  font-size: 18px;
+}
+.content_wrapper main .forecast_container .days_container .days .day_night #day_time,
+.content_wrapper main .forecast_container .days_container .days .day_night #night_time {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .content_wrapper main .forecast_container {
+    background-color: rgba(255, 255, 255, 0.1058823529);
+    border-radius: 20px;
+    box-shadow: 0px 20px 50px 5px rgba(0, 0, 0, 0.358);
+    padding: 20px;
+  }
+  .content_wrapper main .forecast_container h2 {
+    text-align: center;
+    margin: 20px auto;
+  }
+  .content_wrapper main .forecast_container .days_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .content_wrapper main .forecast_container .days_container .days {
+    width: 100%;
+  }
+  .content_wrapper main .forecast_container .days_container .days .day {
+    font-size: 20px;
+  }
+  .content_wrapper main .forecast_container .days_container .days img {
+    width: 70px;
+    height: 70px;
+  }
+  .content_wrapper main .forecast_container .days_container .days .day_weather {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=forecast.css.map */

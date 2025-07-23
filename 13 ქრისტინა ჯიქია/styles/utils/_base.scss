@@ -1,0 +1,40 @@
+@forward "./reset";
+@forward "./variables";
+// Define CSS Variables for theming
+:root {
+  // Light Mode Colors
+  --main-bg-color: #ffeda5d8;
+  --panel-bg-color: #f1666667;
+  --text-color: #333;
+  --sub-text-color: #666;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(115, 53, 118, 0.653);
+  --primary-color: #8f02acde; /* Blue */
+  --accent-color: #1f8091; /* Green */
+
+  // Dark Mode Colors (overridden by .dark-mode class)
+  --dark-main-bg-color: #222;
+  --dark-panel-bg-color: #333;
+  --dark-text-color: #666464;
+  --dark-sub-text-color: #bbb;
+  --dark-border-color: #3b3b3b;
+  --dark-shadow-color: rgba(0, 0, 0, 0.424);
+  --dark-primary-color: #a666ff; /* Lighter blue */
+  --dark-accent-color: #1f667a; /* Lighter green */
+
+  // Other Variables
+  --border-radius: 12px;
+  --transition-speed: 0.3s ease-in-out;
+}
+
+// Dark mode overrides
+body.dark-mode {
+  --main-bg-color: var(--dark-main-bg-color);
+  --panel-bg-color: var(--dark-panel-bg-color);
+  // --text-color: var(--dark-text-color);
+  // --sub-text-color: var(--dark-sub-text-color);
+  --border-color: var(--dark-border-color);
+  --shadow-color: var(--dark-shadow-color);
+  --primary-color: var(--dark-primary-color);
+  // --accent-color: var(--dark-accent-color);
+}

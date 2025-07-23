@@ -1,0 +1,65 @@
+@use 'sass:color';
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.air-conditions {
+  @include card-base;
+  @include fade-in;
+
+  .section-header {
+    @include flex-between;
+    margin-bottom: $spacing-lg;
+
+    h3 {
+      color: $text-secondary;
+      @include text-caption;
+    }
+
+    .see-more-btn {
+      @include button-primary;
+      padding: $spacing-xs $spacing-md;
+      font-size: 12px;
+    }
+  }
+
+  .conditions-grid {
+    @include grid-equal-columns(2, $spacing-lg);
+
+    @include mobile {
+      @include grid-equal-columns(1, $spacing-lg);
+    }
+
+    .condition-item {
+      @include flex-center;
+      gap: $spacing-md;
+      justify-content: flex-start;
+
+      .condition-icon {
+        width: 24px;
+        height: 24px;
+        color: $text-secondary;
+        flex-shrink: 0;
+
+        svg {
+          width: 100%;
+          height: 100%;
+          fill: currentColor;
+        }
+      }
+
+      .condition-info {
+        @include flex-column;
+        gap: 4px;
+
+        .condition-label {
+          color: $text-secondary;
+          @include text-small;
+        }
+
+        .condition-value {
+          @include heading-medium;
+        }
+      }
+    }
+  }
+}

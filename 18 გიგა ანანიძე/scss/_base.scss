@@ -1,0 +1,44 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: $primary-bg;
+  color: $text-primary;
+  line-height: 1.6;
+  @include custom-scrollbar;
+}
+
+// Base typography classes
+.heading-large { @include heading-large; }
+.heading-medium { @include heading-medium; }
+.heading-small { @include heading-small; }
+.text-body { @include text-body; }
+.text-small { @include text-small; }
+.text-caption { @include text-caption; }
+
+// Utility classes
+.flex-center { @include flex-center; }
+.flex-between { @include flex-between; }
+.flex-column { @include flex-column; }
+.flex-column-center { @include flex-column-center; }
+
+.card { @include card-base; }
+.card-interactive { @include card-interactive; }
+
+.btn-primary { @include button-primary; }
+.btn-secondary { @include button-secondary; }
+
+.input { @include input-base; }
+
+.fade-in { @include fade-in; }
+.slide-up { @include slide-up; }
+
+.visually-hidden { @include visually-hidden; }
+.truncate { @include truncate-text; }

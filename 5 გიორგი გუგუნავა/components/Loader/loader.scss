@@ -1,0 +1,75 @@
+$grid-size: 40px;
+$grid-color: #ffffff;
+$animation-duration: 1.3s;
+$animation-name: sk-cubeGridScaleDelay;
+
+$delays: (
+  1: 0.2s,
+  2: 0.3s,
+  3: 0.4s,
+  4: 0.1s,
+  5: 0.2s,
+  6: 0.3s,
+  7: 0s,
+  8: 0.1s,
+  9: 0.2s,
+);
+
+@mixin animation($value) {
+  -webkit-animation: $value;
+  animation: $value;
+}
+
+@mixin animation-delay($value) {
+  -webkit-animation-delay: $value;
+  animation-delay: $value;
+}
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+  transform: $value;
+}
+
+.sk-cube-grid {
+  width: $grid-size;
+  height: $grid-size;
+  margin: 100px auto;
+  display: none;
+  .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: $grid-color;
+    float: left;
+    @include animation(
+      #{$animation-name} $animation-duration infinite ease-in-out
+    );
+  }
+
+  @each $i, $delay in $delays {
+    .sk-cube#{$i} {
+      @include animation-delay($delay);
+    }
+  }
+}
+
+@-webkit-keyframes #{$animation-name} {
+  0%,
+  70%,
+  100% {
+    @include transform(scale3D(1, 1, 1));
+  }
+  35% {
+    @include transform(scale3D(0, 0, 1));
+  }
+}
+
+@keyframes #{$animation-name} {
+  0%,
+  70%,
+  100% {
+    @include transform(scale3D(1, 1, 1));
+  }
+  35% {
+    @include transform(scale3D(0, 0, 1));
+  }
+}

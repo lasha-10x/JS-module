@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="time">
+      <header>
+        <div class="search-container">
+          <div class="search-box">
+            <div>
+              <input
+                type="text"
+                id="city-input"
+                placeholder="Location search..."
+              />
+              <button id="search-btn">Search</button>
+            </div>
+            <div class="unit-toggle">
+              <label class="switch">
+                <input type="checkbox" id="unit-switch" />
+                <span class="slider">
+                  <span class="label-c">°C</span>
+                  <span class="label-f">°F</span>
+                </span>
+              </label>
+              <!-- <button id="dark-mode-toggle">Dark Mode</button> -->
+              <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle" />
+                <span class="slider">
+                  <span class="label-c">☀️</span>
+                  <span class="label-f">🌙</span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="current_weather-container">
+        <div class="current-weather">
+          <div class="current-city">
+            <h2></h2>
+            <div>
+              <p class="current-date"></p>
+              <p class="current-time"></p>
+            </div>
+          </div>
+          <div class="weather-info">
+            <div class="temp-info">
+              <p class="temp"></p>
+              <p class="description"></p>
+            </div>
+            <img src="" alt="weather icon" />
+          </div>
+        </div>
+      </section>
+
+      <section class="hourly-forecast">
+        <h3>Hourly Forecast</h3>
+        <div class="hourly-cards"></div>
+      </section>
+
+      <section class="forecast">
+        <h3>5-Day Forecast</h3>
+        <div class="forecast-cards">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; 2025 Weather App</p>
+      </footer>
+
+      <div id="loader" class="loader" style="display: none"></div>
+
+      <script src="./main.js"></script>
+    </div>
+  </body>
+</html>
