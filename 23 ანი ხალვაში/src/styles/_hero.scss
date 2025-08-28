@@ -1,0 +1,123 @@
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    color: #ffffff;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 32px;
+  }
+  .app-description {
+    font-family: "Poppins", sans-serif;
+    color: #fcfdff;
+    font-size: 20px;
+    text-align: center;
+  }
+  .search-engine {
+    background-color: #fcfdff;
+    display: flex;
+    align-items: stretch;
+    padding: 24px;
+    width: calc(100% - 112px);
+    flex: 1;
+    max-width: 624px;
+    margin: 0 auto;
+    margin-top: 48px;
+    border-radius: 20px;
+    gap: 8px;
+    box-shadow: $box-shadow;
+
+    .location-input {
+      padding: 10px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #f5fcff;
+      border: solid 1px #ddf3ff;
+      border-radius: 15px;
+
+      input {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+      }
+      input:focus-visible {
+        outline: none;
+      }
+    }
+
+    .location-input:focus-visible {
+      outline: blue;
+    }
+
+    .search-button {
+      background: $bg-gradient-magical;
+      padding: 0px 24px;
+      border: none;
+      border-radius: 10px;
+      flex: 1;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .search-button:hover {
+      transform: scale(1.1);
+    }
+  }
+  .helper-text {
+    font-size: 18px;
+    color: red;
+    margin-top: 8px;
+  }
+
+  #welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .sun {
+      border-radius: 50%;
+      height: 192px;
+      width: 192px;
+      margin-top: 30px;
+    }
+
+    .welcome-box {
+      background-color: #fbfcff;
+      border-radius: 20px;
+      padding: 32px;
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      max-width: 384px !important;
+      box-shadow: $box-shadow;
+
+      h2 {
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        color: hsl(220 10% 50%);
+      }
+      button {
+        background: $bg-gradient-magical;
+        padding: 15px 32px;
+        border: none;
+        border-radius: 10px;
+        flex: 1;
+        transition: 0.3s;
+        cursor: pointer;
+        color: white;
+        margin: 8px;
+      }
+      button:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather app</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="js/utils.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <section class="main-section">
+      <h1>Whimsical Weather ✨</h1>
+      <p class="app-description">Your magical weather companion</p>
+      <div class="search-engine" id="search-engine">
+        <div class="location-input">
+          <img src="../assets/icons/map-pin.svg" alt="Pin" />
+
+          <input
+            type="text"
+            placeholder="Enter a magical city"
+            id="search-input"
+          />
+        </div>
+        <button class="search-button" id="search-button">
+          <img src="../assets/icons/search.svg" alt="Search icon" />
+        </button>
+      </div>
+      <p id="helper-text" class="helper-text"></p>
+
+      <div id="welcome">
+        <img
+          class="sun"
+          src="../assets/images/sunny-character.jpg"
+          alt="Sun image"
+        />
+
+        <div class="welcome-box">
+          <h2>Welcome to Whimsical Weather! ✨</h2>
+          <p>Search for any city to discover its magical weather conditions</p>
+          <button id="try-button">Try Batumi! 🌧️</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="weather-content">
+      <!-- Weather content -->
+      <div class="current-weather">
+        <div class="info-section">
+          <img
+            src="../assets/images/sunny-character.jpg"
+            alt="Character"
+            id="character-image"
+          />
+          <h2 id="place">batumi</h2>
+          <p class="weather-value" id="weather-value">5°C</p>
+          <p class="weather-status" id="weather-status">sunny</p>
+        </div>
+        <div class="weather-details">
+          <div class="quote-box">
+            <img class="left-quote" src="../assets/icons/quete.svg" alt="" />
+
+            <h3 id="quote">"After every storm, the sun will smile"</h3>
+            <p>~ Anuki</p>
+            <img class="right-quote" src="../assets/icons/quete.svg" alt="" />
+          </div>
+          <div class="indicators">
+            <div class="humidity">
+              <h3><span id="humidity">65</span>%</h3>
+              <p>Humidity</p>
+            </div>
+            <div class="wind-speed">
+              <h3><span id="wind-speed">24</span>km/h</h3>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="favorite-button" id="favorite-button">
+              <p class="star" id="favorite-star">☆</p>
+              Add to Favorites
+            </button>
+            <button class="mute">
+              <img src="../assets/icons/mute.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weekly-weather" id="weekly-weather">
+      <!-- Weekly weather cards -->
+    </div>
+
+    <div class="favorite-box" id="favorite-box">
+      <!-- Favorite box -->
+      <div class="favorite-header">
+        <p>★</p>
+        <h4>Favorite Cities</h4>
+      </div>
+
+      <div class="favorites" id="favorites"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+$bg-gradient-magical: linear-gradient(
+  135deg,
+  hsl(320 65% 85%),
+  hsl(280 60% 80%)
+);
+
+$box-shadow: 0 8px 32px -8px hsl(320 60% 70% / 0.4);
+$phone-screen: 600px;
+$tablet-screen: 768px;
+$laptop-screen: 992px;
+$large-screen: 1200px;
+
+
+
+$gradient-sky: linear-gradient(135deg, hsl(195 100% 95%), hsl(220 100% 88%));
+$gradient-sunny: linear-gradient(135deg, hsl(45 100% 85%), hsl(35 100% 75%));
+$gradient-rainy: linear-gradient(135deg, hsl(210 80% 80%), hsl(230 70% 70%));
+$gradient-magical: linear-gradient(135deg, hsl(320 65% 85%), hsl(280 60% 80%));
+$gradient-aurora: linear-gradient(135deg, hsl(280 60% 80%), hsl(200 100% 75%), hsl(160 60% 75%));
+
