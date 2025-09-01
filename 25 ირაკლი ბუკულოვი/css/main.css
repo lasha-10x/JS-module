@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: linear-gradient(to top, #6a85b6, #bac8e0);
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.weather-card {
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.search-bar {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-bar:focus-within {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-search {
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: background-color 0.3s ease;
+}
+
+.btn-search:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#error-message {
+  color: #fca5a5;
+}
+
+/* --- Dynamic Background Classes 
+  ak fotoebi ajobebda magram...
+--- */
+.bg-clear {
+  background: linear-gradient(to top, #4a90e2, #87ceeb);
+}
+
+.bg-clouds {
+  background: url(../assets/icons/day\ clear.png);
+  background-size: cover;
+}
+
+.bg-rain {
+  background: url(../assets/icons/rainy\ day.png);
+  background-size: cover;
+}
+
+.bg-drizzle {
+  background: url(../assets/icons/little-cloudy.png);
+  background-size: cover;
+}
+
+.bg-thunderstorm {
+  background: url(../assets/icons/thunderstorm\ night.png);
+  background-size: cover;
+}
+
+.bg-snow {
+  background: linear-gradient(to top, #d3dce6, #e0e6ef);
+}
+
+.bg-atmosphere {
+  background: linear-gradient(to top, #bdc3c7, #2c3e50);
+}
+
+.bg-default {
+  background: linear-gradient(to top, #6a85b6, #bac8e0);
+}
+
+.bg-clear-night {
+  background: url(../assets/icons/clear\ night.png);
+}
+
+.bg-clouds-night {
+  background: url(../assets/icons/partly\ cloudy.png);
+  background-size: cover;
+}
+
+.transition-background {
+  transition: background 2s ease-in-out;
+}
+
+/* --- Loader Styles --- */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=main.css.map */

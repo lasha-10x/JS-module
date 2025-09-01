@@ -1,0 +1,105 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: $bg-default;
+  color: $text-color;
+  box-sizing: border-box;
+}
+.weather-card {
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  background-color: $card-bg;
+  border-radius: 1rem;
+  border: 1px solid $border-color;
+}
+
+.search-bar {
+  background-color: $search-bg;
+}
+
+.search-bar:focus-within {
+  background-color: $search-focus-bg;
+}
+
+.btn-search {
+  background-color: $button-bg;
+  transition: $button-transition;
+}
+
+.btn-search:hover {
+  background-color: $button-hover-bg;
+}
+
+#error-message {
+  color: $error-color;
+}
+
+/* --- Dynamic Background Classes 
+  ak fotoebi ajobebda magram...
+--- */
+.bg-clear {
+  background: $bg-clear;
+}
+.bg-clouds {
+  background: url(../assets/icons/day\ clear.png);
+  background-size: cover;
+}
+.bg-rain {
+  background: url(../assets/icons/rainy\ day.png);
+  background-size: cover;
+}
+.bg-drizzle {
+  background: url(../assets/icons/little-cloudy.png);
+  background-size: cover;
+}
+.bg-thunderstorm {
+  background: url(../assets/icons/thunderstorm\ night.png);
+  background-size: cover;
+}
+.bg-snow {
+  background: $bg-snow;
+}
+.bg-atmosphere {
+  background: $bg-atmosphere;
+}
+.bg-default {
+  background: $bg-default;
+}
+.bg-clear-night {
+  background: url(../assets/icons/clear\ night.png);
+
+}
+.bg-clouds-night {
+  background: url(../assets/icons/partly\ cloudy.png);
+  background-size: cover;
+}
+
+.transition-background {
+  transition: $bg-transition;
+}
+
+/* --- Loader Styles --- */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid $loader-border;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

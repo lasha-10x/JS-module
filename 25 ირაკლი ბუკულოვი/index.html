@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather App</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="./css/main.css" />
+    </head>
+    <body class="bg-default text-white transition-background">
+        <div id="weather-app" class="min-h-screen flex flex-col items-center justify-center p-4">
+            <div id="loader" class="hidden absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div class="loader"></div>
+            </div>
+
+            <div id="app-content" class="w-full max-w-4xl opacity-0 transition-opacity duration-1000">
+                <!-- Live Date - Time -->
+                <div class="flex justify-center mb-4">
+                    <div class="bg-white/10 rounded-lg px-6 py-2 text-center">
+                        <span id="live-date" class="block text-lg font-medium"></span>
+                        <span id="live-time" class="block text-2xl font-bold tracking-widest"></span>
+                    </div>
+                </div>
+                <!-- Search Bar -->
+                <div class="flex items-center justify-center mb-6">
+                    <div class="search-bar flex w-full max-w-md rounded-full shadow-lg">
+                        <input type="text" id="city-input" placeholder="Enter city name..." class="w-full bg-transparent p-4 rounded-l-full focus:outline-none placeholder-white placeholder-opacity-75" />
+                        <button id="search-btn" class="btn-search p-4 rounded-r-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div id="error-message" class="text-center font-semibold mb-4 hidden"></div>
+
+                <!-- Current Weather -->
+                <div class="weather-card p-6 md:p-8 mb-6">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <!-- Left side current City-->
+                        <div class="flex items-center mb-6 md:mb-0">
+                            <div class="mr-6">
+                                <img id="current-weather-icon" src="./assets/icons/weather icon.png" alt="Weather icon" class="w-20 h-20 md:w-24 md:h-24" />
+                            </div>
+                            <div>
+                                <p class="text-6xl md:text-7xl font-bold" id="current-temp">
+                                    25°C
+                                </p>
+                                <p class="text-xl font-medium" id="current-city">Batumi, GE</p>
+                                <p class="text-lg opacity-80" id="current-description">
+                                    Few Clouds
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Rihght side for detailed info -->
+                        <div class="grid grid-cols-2 gap-x-6 gap-y-4 text-lg">
+                            <div class="flex items-center">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-6 h-6 mr-2 opacity-70"
+                                >
+                                    <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z" />
+                                </svg>
+                                <div>
+                                    <p class="font-semibold" id="feels-like">26°C</p>
+                                    <p class="text-sm opacity-80">Feels like</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-6 h-6 mr-2 opacity-70"
+                                >
+                                    <path d="M22 12A10 10 0 1 1 2 12a10 10 0 0 1 20 0Z" />
+                                    <path d="M12 12v-4" />
+                                    <path d="m16 16-2-2" />
+                                </svg>
+                                <div>
+                                    <p class="font-semibold" id="pressure">1015 hPa</p>
+                                    <p class="text-sm opacity-80">Pressure</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-6 h-6 mr-2 opacity-70"
+                                >
+                                    <path d="M22 17a5 5 0 0 0-10 0" />
+                                    <path d="M12 5.5A4.5 4.5 0 0 1 7.5 10a4.5 4.5 0 0 1-5 0" />
+                                    <path d="M20 2.5A4.5 4.5 0 0 1 15.5 7a4.5 4.5 0 0 1-5 0" />
+                                </svg>
+                                <div>
+                                    <p class="font-semibold" id="humidity">70%</p>
+                                    <p class="text-sm opacity-80">Humidity</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-6 h-6 mr-2 opacity-70"
+                                >
+                                    <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2" />
+                                    <path d="M9.6 4.6A2 2 0 1 1 11 8H2" />
+                                    <path d="M12.6 19.4A2 2 0 1 0 14 16H2" />
+                                </svg>
+                                <div>
+                                    <p class="font-semibold" id="wind-speed"></p>
+                                    <p class="text-sm opacity-80">Wind Speed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4-Day Forecast -->
+                <div class="weather-card p-6 md:p-8">
+                    <h2 class="text-xl font-semibold mb-4">4-Day Forecast</h2>
+                    <div id="forecast-container" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4"></div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
