@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather App (Vanilla JS)</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <img
+        src="https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="bg"
+        alt="Background"
+      />
+
+      <div class="glass main">
+        <div class="top">
+          <div class="crumb">
+            <span>🌍</span>
+            <span>Weather Overview</span>
+          </div>
+          <div class="search-section">
+            <input
+              type="text"
+              id="city-input"
+              class="search-input"
+              placeholder="Enter city name"
+            />
+            <button id="search-btn" class="search-btn">Search</button>
+          </div>
+          <div id="datetime"></div>
+        </div>
+
+        <div class="mid">
+          <div class="l">
+            <div class="temp" id="current-temp">Loading...</div>
+            <div class="desc" id="current-desc">Loading...</div>
+            <div class="loc" id="current-location">Loading...</div>
+          </div>
+          <div class="r">
+            <img
+              id="weather-icon"
+              src="https://openweathermap.org/img/wn/01d@2x.png"
+              alt="Weather icon"
+            />
+          </div>
+        </div>
+
+        <div class="activity-cards">
+          <div class="activity-card">
+            <div class="icon">💨</div>
+            <div class="info">
+              <div class="label">Wind</div>
+              <div class="value" id="wind-speed">-- km/h</div>
+            </div>
+          </div>
+          <div class="activity-card">
+            <div class="icon">💧</div>
+            <div class="info">
+              <div class="label">Humidity</div>
+              <div class="value" id="humidity">--%</div>
+            </div>
+          </div>
+          <div class="activity-card">
+            <div class="icon">🌡️</div>
+            <div class="info">
+              <div class="label">Pressure</div>
+              <div class="value" id="pressure">-- hPa</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="forecast-section">
+          <div class="forecast-title">5-Day Forecast</div>
+          <div class="forecast-container" id="forecast-container">
+            <div class="loading">Loading forecast...</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass sidenav">
+        <div class="item active">🏠</div>
+        <div class="item">📍</div>
+        <div class="item">⚙️</div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
