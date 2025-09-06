@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather App</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+<div class="wrapper dark">
+    <!-- Search -->
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search city...">
+        <button class="search-btn"><i class="fas fa-magnifying-glass"></i></button>
+    </div>
+
+    <!-- Toggles -->
+    <div class="toggle-container">
+        <button class="toggle-btn">°F/°C</button>
+        <button class="theme-btn">🌙</button>
+    </div>
+
+    <!-- Favorites -->
+    <div class="favorites-container"></div>
+    <button class="clear-fav-btn">Clear Favorites</button>
+
+    <!-- Weather Card -->
+    <div class="card">
+        <div class="today-card">
+            <h2 class="city-name">City, Country</h2>
+            <h3 class="temp">--°C</h3>
+            <img class="weather-icon" src="" alt="Weather icon">
+            <p class="description">--</p>
+            <div class="bottom-cards">
+                <div class="humidity">
+                    <img src="images/humidity.svg" alt="Humidity">
+                    <span class="humidity-value">--%</span>
+                </div>
+                <div class="divider"></div>
+                <div class="pressure">
+                    <img src="images/pressure.svg" alt="Pressure">
+                    <span class="pressure-value">-- hPa</span>
+                </div>
+                <div class="divider"></div>
+                <div class="sun">
+                    <img src="images/sun.svg" alt="Sun">
+                    <span class="sun-value">--:-- | --:--</span>
+                </div>
+                <div class="divider"></div>
+                <div class="wind">
+                    <img src="images/wind.svg" alt="Wind">
+                    <span class="wind-value">-- m/s</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forecast -->
+    <div class="forecast">
+        <div class="forecast-item">
+            <h5>Mon</h5>
+            <img src="" alt="Weather icon">
+            <p>--°/--°</p>
+        </div>
+        <div class="forecast-item">
+            <h5>Tue</h5>
+            <img src="" alt="Weather icon">
+            <p>--°/--°</p>
+        </div>
+        <div class="forecast-item">
+            <h5>Wed</h5>
+            <img src="" alt="Weather icon">
+            <p>--°/--°</p>
+        </div>
+        <div class="forecast-item">
+            <h5>Thu</h5>
+            <img src="" alt="Weather icon">
+            <p>--°/--°</p>
+        </div>
+        <div class="forecast-item">
+            <h5>Fri</h5>
+            <img src="" alt="Weather icon">
+            <p>--°/--°</p>
+        </div>
+    </div>
+
+    <!-- Loading -->
+    <div class="loading">Loading...</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
